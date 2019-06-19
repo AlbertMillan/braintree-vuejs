@@ -157,7 +157,7 @@ export default {
                         })
                     },
                     onAuthorize: (data, options) => {
-                        return paypalInstance.tokenizePayment(options).then(payload => {
+                        return paypalInstance.tokenizePayment(data).then(payload => {
                             console.log(payload);
                             this.error = "";
                             this.nonce = payload.nonce;
